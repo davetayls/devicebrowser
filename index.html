@@ -53,7 +53,7 @@
         	background: #333;
         	float: left;
         	padding: 25px;
-            overflow: auto;
+            overflow: hidden;
         }
         .window:hover {
         	background: #555;
@@ -70,16 +70,10 @@
             display: block;
         }
         .iPhone {
-        	height: 480px;
-        	width: 335px;
         }
         .iPad {
-        	height: 1024px;
-        	width: 783px;
         }
         .smartPhone {
-        	height: 800px;
-        	width: 495px;
         }
         #share {
         	background: #000;
@@ -137,21 +131,19 @@
         </div>
         <div id="instructions">
             <h1>Simple responsive design device browser</h1>
-            <p>Use grey edges of windows to drag and scroll</p>
         </div>
         <div id="wrapper">
             <div class="iPhone window">
-                <iframe src="" width="320" height="6000" scrolling="no"></iframe>
+                <iframe src="" width="320" height="497" scrolling="yes"></iframe>
             </div>
             <div class="iPad window">
-                <iframe src="" width="768" height="6000" scrolling="no"></iframe>
+                <iframe src="" width="785" height="1024" scrolling="yes"></iframe>
             </div>
             <div class="smartPhone window">
-                <iframe src="" width="480" height="6000" scrolling="no"></iframe>
+                <iframe src="" width="480" height="800" scrolling="yes"></iframe>
             </div>
         </div>
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-        <script src="https://github.com/davetayls/jquery.kinetic/raw/master/jquery.kinetic.js" type="text/javascript"></script>
         <script type="text/javascript">
             var $url = $('#url input'),
                 $windows = $('.window');
@@ -182,7 +174,6 @@
                 }
             })
             .focus();
-            $windows.kinetic();
             $(window).load(function(){
                 if (location.hash.substr(1)){
                     setSrc(location.hash.substr(1));
